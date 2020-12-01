@@ -35,7 +35,7 @@ namespace DevTeamsProject
         }
 
         //DevTeam Update
-        public bool UpdateDevTeams(DevTeam oldTeam, DevTeam  newTeam)
+        public bool UpdateDevTeams(DevTeam oldTeam, DevTeam newTeam)
         {
             if (oldTeam != null)
            {

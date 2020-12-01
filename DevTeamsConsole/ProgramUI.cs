@@ -20,7 +20,6 @@ namespace DevTeamsProject
             DevMenu();
 
         }
-
         private void DevMenu()
         {
             bool keepRunning = true;
@@ -31,13 +30,15 @@ namespace DevTeamsProject
                 Console.WriteLine("\nSelect a Menu Option:\n" +
                     "1. Create a New Development Team.\n" +
                     "2. Create a New Developer.\n" +
-                    "3. View Existing Development Teams.\n" +
-                    "4. View Existing Developers.\n" +
-                    "5. Add Developer to a Development Team.\n" +
-                    "6. Remove a Development Team.\n" +
-                    "7. Remove a Developer.\n" +
-                    "8. Update a Developer.\n" +
-                    "9. View Developers Needing Pluralsight Access.\n" +
+                    "3. View Development Teams.\n" +
+                    "4. View Existing Development Teams + Members.\n" +
+                    "5. View Existing Developers.\n" +
+                    "6. Add Developer to a Development Team.\n" +
+                    "7. Remove a Development Team.\n" +
+                    "8. Remove a Developer.\n" +
+                    "9. Update a Developer.\n" +
+                    "10. Update a Development Team.\n" +
+                    "11. View Developers Needing Pluralsight Access.\n" +
                     "0. Exit\n");
 
                 //get the user's input
@@ -54,30 +55,38 @@ namespace DevTeamsProject
                         CreateNewDeveloper();
                         break;
                     case "3":
-                        // view existing development teams
-                        DisplayAllDevTeams();
+                        // view Development Teams
+                        DisplayIndTeam();
                         break;
                     case "4":
+                        // view existing development teams + Members
+                        DisplayAllDevTeams();
+                        break;
+                    case "5":
                         // view existing developers
                         DisplayAllDevelopers();
                         break;
-                    case "5":
+                    case "6":
                         // Add a developer to a dev team
                         AddDevToTeam();
                         break;
-                    case "6":
+                    case "7":
                         // remove a development team
                         RemoveDevTeam();
                         break;
-                    case "7":
+                    case "8":
                         // remove a developer
                         RemoveDeveloper();
                         break;
-                    case "8":
+                    case "9":
                         // update a developer
                         UpdateDeveloper();
                         break;
-                    case "9":
+                    case "10":
+                        // update a Development Team
+                        UpdateTeam();
+                        break;
+                    case "11":
                         // view developers needing pluralsight access
                         PluralLic();
                         break;
@@ -96,10 +105,8 @@ namespace DevTeamsProject
                 Console.Clear();
             }
         }
-
         private void CreateDevTeam()
         {
-
             bool exitMethodCrTe = true;
             while (exitMethodCrTe)
             {
@@ -113,7 +120,7 @@ namespace DevTeamsProject
 
                 newDevTeam.DevTeamName = devTeamName;
 
-                Console.WriteLine("\nEnter the Development's ID #: 1 to 10");
+                Console.WriteLine("\nEnter the Development Team ID #: 1 to 10");
                 string devTeamStr = Console.ReadLine();
 
                 int devTeamIdInt = Convert.ToInt32(devTeamStr);
@@ -135,7 +142,6 @@ namespace DevTeamsProject
                 }
             }
         }
-
         private void CreateNewDeveloper()
         {
             bool exitMethodCr = true;
@@ -188,29 +194,51 @@ namespace DevTeamsProject
                 }
             }
         }
-
-        private void DisplayAllDevTeams()
+        private void DisplayIndTeam()
         {
-            // #3 on the menu
+            // #3 
             Console.Clear();
-            List<DevTeam> listofDevTeams = _devTeamRepoUI.GetDevTeams();
+            List<DevTeam> listIndDevT = _devTeamRepoUI.GetDevTeams();
 
-            foreach (DevTeam devTeams in listofDevTeams)
+            foreach (DevTeam devTe in listIndDevT)
             {
-                Console.WriteLine($"\nDevelopment Team ID Number: {devTeams.DevTeamId}" +
-                    $"\nDevelopment Team Name: {devTeams.DevTeamName}");
+                Console.WriteLine($"\nDevelopment Team Name: {devTe.DevTeamName}" +
+                    $"\nDevelopment Team ID Number: {devTe.DevTeamId}");
 
-                foreach (Developer dev in devTeams.DevTeamMembers)
-                {
-                    Console.WriteLine($"\nDeveloper ID#: {dev.DevId}" +
-                        $"\nDeveloper First Name: {dev.FirstName}" +
-                        $"\nDeveloper Last Name: {dev.LastName}");
-                }
             }
         }
+        private void DisplayAllDevTeams()
+        {
+            // #4 on the menu
+            Console.Clear();
+            List<DevTeam> listofDevTeams = _devTeamRepoUI.GetDevTeams();
+            try
+            {
+                foreach (DevTeam devTeams in listofDevTeams)
+                {
+                    Console.WriteLine($"\nDevelopment Team ID Number: {devTeams.DevTeamId}" +
+                        $"\nDevelopment Team Name: {devTeams.DevTeamName}");
+
+                    if (devTeams.DevTeamMembers != null)
+                    {
+                        foreach (Developer dev in devTeams.DevTeamMembers)
+                        {
+                            Console.WriteLine($"\nDeveloper ID#: {dev.DevId}" +
+                                $"\nDeveloper First Name: {dev.FirstName}" +
+                                $"\nDeveloper Last Name: {dev.LastName}");
+                        }
+                    }
+                }
+            }
+            catch(Exception e) 
+            {
+                Console.WriteLine($"Error: {e}");
+            }
+     }
+
         private void DisplayAllDevelopers()
         {
-            // #4 on the menu   
+            // #5 on the menu   
             Console.Clear();
             List<Developer> listofDevelopers = _developerRepoUI.GetDevelopers();
 
@@ -227,7 +255,7 @@ namespace DevTeamsProject
             bool exitMethodAddTe = true;
             while (exitMethodAddTe)
             {
-                // #5 on menu
+                // #6 on menu
                 Console.Clear();
                 List<Developer> addDevelopers = _developerRepoUI.GetDevelopers();
                 List<DevTeam> devAddTeam = _devTeamRepoUI.GetDevTeams();
@@ -280,7 +308,7 @@ namespace DevTeamsProject
         }
         private void RemoveDevTeam()
         {
-            // #6 on menu
+            // #7 on menu
             List<DevTeam> removeDevTeam = _devTeamRepoUI.GetDevTeams();
 
             Console.Clear();
@@ -298,7 +326,7 @@ namespace DevTeamsProject
         }
         private void RemoveDeveloper()
         {
-            // #7 on the menu
+            // #8 on the menu
             List<Developer> removeDeveloper = _developerRepoUI.GetDevelopers();
 
             Console.Clear();
@@ -318,8 +346,7 @@ namespace DevTeamsProject
         }
         private void UpdateDeveloper()
         {
-            List<Developer> updateDev = _developerRepoUI.GetDevelopers();
-
+            // #9
             Developer newDev = new Developer();
 
             Console.Clear();
@@ -354,9 +381,31 @@ namespace DevTeamsProject
 
             _developerRepoUI.UpdateDevelopers(oldDev, newDev);
         }
+        private void UpdateTeam()
+        {   
+            // #10
+            DevTeam newTeam = new DevTeam();
+
+            Console.Clear();
+
+            DisplayIndTeam();
+
+            Console.WriteLine("\nEnter the Development Team ID Number for Updating.");
+            int teOriginId = Convert.ToInt32(Console.ReadLine());
+
+            DevTeam oldDev = _devTeamRepoUI.GetDevTeamId(teOriginId);
+            
+            Console.WriteLine("\nEnter the Development Team NEW ID #: 1 to 10");
+            newTeam.DevTeamId = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\nEnter the NEW Name for the Development Team.");
+            newTeam.DevTeamName = Console.ReadLine();
+
+            _devTeamRepoUI.UpdateDevTeams(oldDev, newTeam);
+        }
         private void PluralLic()
         {
-            // #9 on menu
+            // #11 on menu
             Console.Clear();
 
             List<Developer> pluralDev = _developerRepoUI.GetDevoperPlural();
@@ -366,18 +415,6 @@ namespace DevTeamsProject
                 Console.WriteLine($"\nDeveloper ID: {dev.DevId}" +
                     $"\nFirst Name: {dev.FirstName}" +
                     $"\nLast Name: {dev.LastName}.\n");
-            }
-        }
-        private void DisplayIndTeam()
-        {
-            Console.Clear();
-            List<DevTeam> listIndDevT = _devTeamRepoUI.GetDevTeams();
-
-            foreach (DevTeam devTe in listIndDevT)
-            {
-                Console.WriteLine($"\nDevelopment Team Name: {devTe.DevTeamName}" +
-                    $"\nDevelopment Team ID Number: {devTe.DevTeamId}");
-
             }
         }
             // Data verification Functions

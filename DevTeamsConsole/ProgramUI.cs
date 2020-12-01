@@ -219,15 +219,15 @@ namespace DevTeamsProject
                     Console.WriteLine($"\nDevelopment Team ID Number: {devTeams.DevTeamId}" +
                         $"\nDevelopment Team Name: {devTeams.DevTeamName}");
 
-                    if (devTeams.DevTeamMembers != null)
-                    {
+                    //if (devTeams.DevTeamMembers != null)
+                    //{
                         foreach (Developer dev in devTeams.DevTeamMembers)
                         {
                             Console.WriteLine($"\nDeveloper ID#: {dev.DevId}" +
                                 $"\nDeveloper First Name: {dev.FirstName}" +
                                 $"\nDeveloper Last Name: {dev.LastName}");
                         }
-                    }
+                    //}
                 }
             }
             catch(Exception e) 
@@ -400,6 +400,8 @@ namespace DevTeamsProject
 
             Console.WriteLine("\nEnter the NEW Name for the Development Team.");
             newTeam.DevTeamName = Console.ReadLine();
+
+            newTeam.DevTeamMembers = oldDev.DevTeamMembers;
 
             _devTeamRepoUI.UpdateDevTeams(oldDev, newTeam);
         }

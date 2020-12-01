@@ -212,31 +212,21 @@ namespace DevTeamsProject
             // #4 on the menu
             Console.Clear();
             List<DevTeam> listofDevTeams = _devTeamRepoUI.GetDevTeams();
-            try
-            {
+           
                 foreach (DevTeam devTeams in listofDevTeams)
                 {
                     Console.WriteLine($"\nDevelopment Team ID Number: {devTeams.DevTeamId}" +
                         $"\nDevelopment Team Name: {devTeams.DevTeamName}");
-
-                    //if (devTeams.DevTeamMembers != null)
-                    //{
                         foreach (Developer dev in devTeams.DevTeamMembers)
                         {
                             Console.WriteLine($"\nDeveloper ID#: {dev.DevId}" +
                                 $"\nDeveloper First Name: {dev.FirstName}" +
                                 $"\nDeveloper Last Name: {dev.LastName}");
                         }
-                    //}
                 }
-            }
-            catch(Exception e) 
-            {
-                Console.WriteLine($"Error: {e}");
-            }
-     }
-
-        private void DisplayAllDevelopers()
+         }
+    
+         private void DisplayAllDevelopers()
         {
             // #5 on the menu   
             Console.Clear();

@@ -24,7 +24,7 @@ namespace DevTeamsProject
             LastName = lastName;
             DevId = devId;
             HasLicense = hasLicense;
-           
+        
         }
 
       }

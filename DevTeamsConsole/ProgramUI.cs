@@ -216,11 +216,10 @@ namespace DevTeamsProject
 
             foreach (Developer developer in listofDevelopers)
             {
-
-                Console.WriteLine($"\nDeveloper First Name: {developer.FirstName}\n" +
-                    $"Developer Last Name: {developer.LastName}\n" +
-                    $"Developer ID Number: {developer.DevId}\n" +
-                    $"Developer Has a License: {developer.HasLicense}\n");
+                Console.WriteLine($"\nDeveloper ID Number: {developer.DevId}" +
+                    $"\nDeveloper First Name: {developer.FirstName}" +
+                    $"\nDeveloper Last Name: {developer.LastName}" +
+                    $"\nDeveloper Has a License: {developer.HasLicense}\n");
             }
         }
         private void AddDevToTeam()
@@ -234,14 +233,13 @@ namespace DevTeamsProject
                 List<DevTeam> devAddTeam = _devTeamRepoUI.GetDevTeams();
 
                 // display all content
-                DisplayAllDevelopers();
-                DisplayIndTeam();
+                DisplayBoth();
 
-                Console.WriteLine("Please Enter Developer ID # (1 to 30): \n");
+                Console.WriteLine("\nPlease Enter Developer ID # (1 to 30): \n");
                 string localDev = Console.ReadLine();
                 int localDevId = CheckDevIdRange(Convert.ToInt32(localDev));
 
-                Console.WriteLine($"Please Enter the Development Team Number to Assign Developer.");
+                Console.WriteLine($"\nPlease Enter the Development Team Number to Assign Developer.");
                 string localDevTeamStr = Console.ReadLine();
 
                 int localDevTeamId = Convert.ToInt32(localDevTeamStr);
@@ -254,19 +252,19 @@ namespace DevTeamsProject
                     {
                         if (checkedDevId == null)
                         {
-                            Console.WriteLine($"Developer Number: {localDev} Added to Development Team Number: {localDevTeamStr}\n");
+                            Console.WriteLine($"\nDeveloper Number: {localDev} Added to Development Team Number: {localDevTeamStr}\n");
                             _devTeamRepoUI.AddDevTeamMember(localDevTeamId);
                             Thread.Sleep(1500);
                         }
                         else
                         {
-                            Console.WriteLine($"Developer Number: {localDev} is Already Assigned Development Team.\n");
+                            Console.WriteLine($"\nDeveloper Number: {localDev} is Already Assigned Development Team.\n");
                             Thread.Sleep(1500);
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Please Enter a Valid Development Team ID #:\n");
+                        Console.WriteLine("\nPlease Enter a Valid Development Team ID #:\n");
 
                     }
 
@@ -307,14 +305,14 @@ namespace DevTeamsProject
 
             DisplayAllDevelopers();
 
-            Console.WriteLine("Enter the Developer ID #:(1-30) for Removal.\n");
+            Console.WriteLine("\nEnter the Developer ID #:(1-30) for Removal.\n");
             int removeDevId = Convert.ToInt32(Console.ReadLine());
 
             bool confirmDevDel = _developerRepoUI.RemoveDeveoperFromList(removeDevId);
 
             if (confirmDevDel == true)
             {
-                Console.WriteLine($"2nd Cofirmation, Development Team {confirmDevDel} was Removed.\n");
+                Console.WriteLine($"\n2nd Cofirmation, Development Team {confirmDevDel} was Removed.\n");
 
             }
         }
@@ -417,6 +415,27 @@ namespace DevTeamsProject
                 }
 
             }
+            private void DisplayBoth()
+            {
+                List<Developer> displayBoth = _developerRepoUI.GetDevelopers();
+                List<DevTeam> displayTeam = _devTeamRepoUI.GetDevTeams();   
+
+                foreach(Developer dev in displayBoth)
+                {
+                Console.WriteLine($"\nDeveloper ID Number: {dev.DevId}" +
+                    $"\nDeveloper First Name: {dev.FirstName}" +
+                    $"\nDeveloper Last Name: {dev.LastName}" +
+                    $"\nDeveloper Has a License: {dev.HasLicense}\n");
+                }
+                
+                foreach(DevTeam devTeam in displayTeam)
+                {
+                    Console.WriteLine($"\nDevelopment Team Name: {devTeam.DevTeamName}" +
+                    $"\nDevelopment Team ID Number: {devTeam.DevTeamId}");
+
+                }
+            }    
+   
             // seed content
             private void SetContent()
             {
@@ -460,7 +479,7 @@ namespace DevTeamsProject
                 DevTeam devT1 = new DevTeam("DevTeamOne", 1, devTeamMem1);
                 DevTeam devT2 = new DevTeam("DevTeamTwo", 2, devTeamMem2);
                 DevTeam devT3 = new DevTeam("DevTeamThree", 3, devTeamMem3);
-                DevTeam devT4 = new DevTeam("DevTeamFout", 4, devTeamMem4);
+                DevTeam devT4 = new DevTeam("DevTeamFour", 4, devTeamMem4);
 
                 _devTeamRepoUI.AddDevTeamToList(devT1);
                 _devTeamRepoUI.AddDevTeamToList(devT2);

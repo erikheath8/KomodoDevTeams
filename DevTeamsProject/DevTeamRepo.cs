@@ -35,15 +35,13 @@ namespace DevTeamsProject
         }
 
         //DevTeam Update
-        public bool UpdateDevTeams(int originalDevTeamId, DevTeam  newDevTeamId)
+        public bool UpdateDevTeams(DevTeam oldTeam, DevTeam  newTeam)
         {
-            DevTeam oldDevTeamId = GetDevTeamId(originalDevTeamId);
-
-            if (oldDevTeamId != null)
-            {
-                oldDevTeamId.DevTeamName = newDevTeamId.DevTeamName;
-                oldDevTeamId.DevTeamId = newDevTeamId.DevTeamId;
-                oldDevTeamId.DevTeamMembers = newDevTeamId.DevTeamMembers;
+            if (oldTeam != null)
+           {
+                oldTeam.DevTeamName = newTeam.DevTeamName;
+                oldTeam.DevTeamId = newTeam.DevTeamId;
+                oldTeam.DevTeamMembers = newTeam.DevTeamMembers;
                 return true;
             }
             else

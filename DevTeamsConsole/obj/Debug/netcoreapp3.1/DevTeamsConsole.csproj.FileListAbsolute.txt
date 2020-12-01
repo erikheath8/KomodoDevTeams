@@ -1,0 +1,16 @@
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.csprojAssemblyReference.cache
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.AssemblyInfoInputs.cache
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.AssemblyInfo.cs
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.csproj.CoreCompileInputs.cache
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsConsole.exe
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsConsole.deps.json
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsConsole.runtimeconfig.json
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsConsole.runtimeconfig.dev.json
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsConsole.dll
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsConsole.pdb
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsProject.dll
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\bin\Debug\netcoreapp3.1\DevTeamsProject.pdb
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.csproj.CopyComplete
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.dll
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.pdb
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsConsole\obj\Debug\netcoreapp3.1\DevTeamsConsole.genruntimeconfig.cache

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bhHe41GVL+0QS0WbJPSfe3ppyAW52XI+4wx4VbjtS+9wg3dqSBszocKABVBfdNfj4XDIKqCDW363sKw0DdzMDA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fzr60\\Documents\\projects\\elevenfifty\\assignment\\projectDeveloperTeams\\DevTeamsProjectMain\\DevTeamsProject\\DevTeamsProject\\DevTeamsProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fzr60\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\fzr60\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

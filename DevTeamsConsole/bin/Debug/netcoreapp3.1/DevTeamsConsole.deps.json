@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DevTeamsConsole/1.0.0": {
+        "dependencies": {
+          "DevTeamsProject": "1.0.0"
+        },
+        "runtime": {
+          "DevTeamsConsole.dll": {}
+        }
+      },
+      "DevTeamsProject/1.0.0": {
+        "runtime": {
+          "DevTeamsProject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DevTeamsConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevTeamsProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

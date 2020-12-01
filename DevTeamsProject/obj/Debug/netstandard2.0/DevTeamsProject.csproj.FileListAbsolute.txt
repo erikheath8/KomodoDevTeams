@@ -1,0 +1,9 @@
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\bin\Debug\netstandard2.0\DevTeamsProject.deps.json
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\bin\Debug\netstandard2.0\DevTeamsProject.dll
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\bin\Debug\netstandard2.0\DevTeamsProject.pdb
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\obj\Debug\netstandard2.0\DevTeamsProject.csprojAssemblyReference.cache
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\obj\Debug\netstandard2.0\DevTeamsProject.AssemblyInfoInputs.cache
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\obj\Debug\netstandard2.0\DevTeamsProject.AssemblyInfo.cs
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\obj\Debug\netstandard2.0\DevTeamsProject.csproj.CoreCompileInputs.cache
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\obj\Debug\netstandard2.0\DevTeamsProject.dll
+C:\Users\fzr60\Documents\projects\elevenfifty\assignment\projectDeveloperTeams\DevTeamsProjectMain\DevTeamsProject\DevTeamsProject\obj\Debug\netstandard2.0\DevTeamsProject.pdb
